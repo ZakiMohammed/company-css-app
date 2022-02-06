@@ -1,0 +1,47 @@
+/*
+    CONTENT:
+        - IMPORTS
+        - GLOBAL
+        - HEADER
+*/
+
+/* IMPORTS
+================================================================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Poppins:wght@300;400;500;700&display=swap');
+
+/* GLOBAL
+================================================================================================================== */
+* {
+    font-family: 'Poppins', sans-serif;
+    color: #2d3436;
+}
+
+/* HEADER
+================================================================================================================== */
+header .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 36px;
+    color: #00cec9;
+    margin-bottom: 0px;
+}
+header .sub-title {
+    font-family: 'Cookie', cursive;
+    font-size: 24px;
+    color: #636e72;
+    margin: 0;
+}
+
+header nav {
+    background-color: #dfe6e9;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+header nav a {
+    display: inline-block;
+    padding: 20px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+header nav a:hover {
+    background-color: #00cec9;
+}
