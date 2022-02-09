@@ -43,4 +43,5 @@ border-radius: 10px;
 ## Responsive Design (Media Query) 
 ```
 Mobile: 500px
+Tab: 768px
 ```

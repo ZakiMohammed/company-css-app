@@ -84,13 +84,31 @@ footer {
 ================================================================================================================== */
 main {
     padding: 0 20px;
+    display: flex;
+    flex-direction: row;
 }
 main p {
     margin: 0;
 }
+main .main-content {
+    flex-basis: 75%;
+    padding-right: 20px;
+}
+main .sidebar {
+    flex-basis: 25%;
+}
+
 @media (max-width: 500px) {
     main {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    main .main-content {
+        padding-right: 0;
     }
 }
