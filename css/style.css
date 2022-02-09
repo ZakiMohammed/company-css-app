@@ -3,6 +3,8 @@
         - IMPORTS
         - GLOBAL
         - HEADER
+        - FOOTER
+        - MAIN
 */
 
 /* IMPORTS
@@ -15,14 +17,20 @@
     font-family: 'Poppins', sans-serif;
     color: #2d3436;
 }
+body {
+    margin: 0;
+}
 
 /* HEADER
 ================================================================================================================== */
+header {
+    padding: 20px 20px 30px;
+}
 header .logo {
     font-family: 'Bebas Neue', cursive;
     font-size: 36px;
     color: #00cec9;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 header .sub-title {
     font-family: 'Cookie', cursive;
@@ -33,7 +41,7 @@ header .sub-title {
 
 header nav {
     background-color: #dfe6e9;
-    margin: 20px 0;
+    margin: 20px 0 0;
     border-radius: 10px;
 }
 header nav a {
@@ -44,4 +52,45 @@ header nav a {
 }
 header nav a:hover {
     background-color: #00cec9;
+}
+@media (max-width: 500px) {
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header .logo,
+    header .sub-title,
+    header nav {
+        text-align: center;
+    }
+
+    header nav a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* FOOTER
+================================================================================================================== */
+footer {
+    background-color: #dfe6e9;
+    padding: 50px 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* MAIN
+================================================================================================================== */
+main {
+    padding: 0 20px;
+}
+main p {
+    margin: 0;
+}
+@media (max-width: 500px) {
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

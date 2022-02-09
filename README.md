@@ -39,3 +39,8 @@ Background Dark Color: #dfe6e9
 ```
 border-radius: 10px;
 ```
+
+## Responsive Design (Media Query) 
+```
+Mobile: 500px
+```
