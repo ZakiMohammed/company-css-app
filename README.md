@@ -30,7 +30,9 @@ Adding Font to HTML page:
 Text Color: #2d3436
 Text Light Color: #636e72
 Primary Color: #00cec9
-Secondary Color: #fd79a8
+Primary Light Color: #81ecec
+Secondary Color: #e84393
+Secondary Light Color: #fd79a8
 Background Color: default (white)
 Background Dark Color: #dfe6e9
 ```
