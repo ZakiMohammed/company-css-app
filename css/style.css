@@ -2,11 +2,14 @@
     CONTENT:
         - IMPORTS
         - GLOBAL
+        - IMAGES
+        - BORDER
         - HEADER
         - FOOTER
         - MAIN
         - MAIN CONTENT
         - SIDEBAR
+        - FEATURES
 */
 
 /* IMPORTS
@@ -21,6 +24,22 @@
 }
 body {
     margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #00cec9;
+}
+
+/* IMAGES
+================================================================================================================== */
+.img-responsive {
+    height: auto;
+    max-width: 100%;
+}
+
+/* BORDER
+================================================================================================================== */
+.border-rounded {
+    border-radius: 10px;
 }
 
 /* HEADER
@@ -40,8 +59,8 @@ header .sub-title {
     color: #636e72;
     margin: 0;
 }
-
 header nav {
+    display: flex;
     background-color: #dfe6e9;
     margin: 20px 0 0;
     border-radius: 10px;
@@ -55,21 +74,25 @@ header nav a {
 header nav a:hover {
     background-color: #00cec9;
 }
+header nav a.active {
+    background-color: #00cec9;
+}
 @media (max-width: 500px) {
     header {
         padding-left: 10px;
         padding-right: 10px;
     }
-
     header .logo,
     header .sub-title,
     header nav {
         text-align: center;
     }
-
     header nav a {
+        flex-grow: 1;
+        text-align: center;
         padding-left: 10px;
         padding-right: 10px;
+        font-size: 14px;
     }
 }
 
@@ -78,7 +101,7 @@ header nav a:hover {
 footer {
     background-color: #dfe6e9;
     padding: 50px 0;
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -171,21 +194,47 @@ main {
     margin-right: 5px;
     font-size: 12px;
     text-align: center;
+    padding: 10px;
+    background-color: #dfe6e9;
 }
 .sidebar section .social-links a:last-child {
     margin-right: 0;
 }
 .sidebar section .social-links a i {
-    padding: 10px;
+    padding-right: 5px;
 }
-.sidebar section .social-links .facebook {
+.sidebar section .social-links .facebook i,
+.sidebar section .social-links .facebook span {
+    color: #1877f2;
+}
+.sidebar section .social-links .instagram i,
+.sidebar section .social-links .instagram span {
+    color: #e1306c;
+}
+.sidebar section .social-links .twitter i,
+.sidebar section .social-links .twitter span {
+    color: #1da1f2;
+}
+.sidebar section .social-links .facebook:hover {
     background-color: #1877f2;
 }
-.sidebar section .social-links .instagram {
+.sidebar section .social-links .facebook:hover i,
+.sidebar section .social-links .facebook:hover span {
+    color: #fff;
+}
+.sidebar section .social-links .instagram:hover {
     background-color: #e1306c;
 }
-.sidebar section .social-links .twitter {
+.sidebar section .social-links .instagram:hover i,
+.sidebar section .social-links .instagram:hover span {
+    color: #fff;
+}
+.sidebar section .social-links .twitter:hover {
     background-color: #1da1f2;
+}
+.sidebar section .social-links .twitter:hover i,
+.sidebar section .social-links .twitter:hover span {
+    color: #fff;
 }
 .sidebar section .social-links a i,
 .sidebar section .social-links a span {
@@ -199,5 +248,46 @@ main {
         border-top-style: solid;
         padding-top: 25px;
         margin-top: 25px;
+    }
+}
+
+/* FEATURES
+================================================================================================================== */
+.features {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+.features .feature {
+    flex-basis: 33.3333333333%;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 2px 2px 5px 0px #dfe6e9;
+}
+.features .feature:first-child {
+    margin-left: 0;
+}
+.features .feature:last-child {
+    margin-right: 0;
+}
+.features .feature h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.features .feature p {
+    margin: 0;
+}
+@media (max-width: 900px) {
+    .features {
+        flex-direction: column;
+    }
+    .features .feature {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .features .feature:last-child {
+        margin-bottom: 0;
     }
 }
