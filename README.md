@@ -29,6 +29,7 @@ Adding Font to HTML page:
 ```
 Text Color: #2d3436
 Text Light Color: #636e72
+Text Light Color 2: #b2bec3
 Primary Color: #00cec9
 Primary Light Color: #81ecec
 Secondary Color: #e84393

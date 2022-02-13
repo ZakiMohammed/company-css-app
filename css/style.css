@@ -2,14 +2,19 @@
     CONTENT:
         - IMPORTS
         - GLOBAL
+
         - IMAGES
         - BORDER
+        - CARD
+        - TABLE
+
         - HEADER
         - FOOTER
         - MAIN
         - MAIN CONTENT
         - SIDEBAR
-        - FEATURES
+        - PAGE CONTENT
+        - PAGE SUB CONTENT
 */
 
 /* IMPORTS
@@ -28,6 +33,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: #00cec9;
 }
+::selection {
+    background-color: #e84393;
+    color: #fff;
+}
 
 /* IMAGES
 ================================================================================================================== */
@@ -40,6 +49,55 @@ h1, h2, h3, h4, h5, h6 {
 ================================================================================================================== */
 .border-rounded {
     border-radius: 10px;
+}
+.border-circle {
+    border-radius: 50%;
+}
+
+/* CARD
+================================================================================================================== */
+.card {
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px 0px #dfe6e9;
+}
+.card .card-image {
+    margin-bottom: 5px;
+}
+.card .card-title {
+    margin: 0;
+}
+.card .card-subtitle {
+    margin: 0;
+    color: #b2bec3;
+}
+.card .card-text {
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* TABLE
+================================================================================================================== */
+.table-responsive {
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table tr th,
+.table tr td {
+    border: 1px solid #dfe6e9;
+    padding: 5px;
+}
+.table tr:nth-child(even) th,
+.table tr:nth-child(even) td {
+    background-color: #dfe6e9;
+}
+.table tr th {
+    color: #e84393;
+    border-bottom: 5px solid #dfe6e9;
 }
 
 /* HEADER
@@ -251,43 +309,31 @@ main {
     }
 }
 
-/* FEATURES
+/* PAGE CONTENT
 ================================================================================================================== */
-.features {
-    display: flex;
-    width: 100%;
-    margin-top: 30px;
+.page-content {
+    padding-bottom: 30px;
 }
-.features .feature {
-    flex-basis: 33.3333333333%;
-    border: 1px solid #dfe6e9;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 0 10px;
-    box-shadow: 2px 2px 5px 0px #dfe6e9;
+.page-content img {
+    margin-bottom: 10px;
 }
-.features .feature:first-child {
-    margin-left: 0;
-}
-.features .feature:last-child {
-    margin-right: 0;
-}
-.features .feature h2 {
+.page-content h2 {
     margin: 0;
     margin-bottom: 10px;
 }
-.features .feature p {
+.page-content p {
     margin: 0;
 }
-@media (max-width: 900px) {
-    .features {
-        flex-direction: column;
-    }
-    .features .feature {
-        margin: 0;
-        margin-bottom: 10px;
-    }
-    .features .feature:last-child {
-        margin-bottom: 0;
-    }
+
+/* PAGE SUB CONTENT
+================================================================================================================== */
+.page-sub-content {
+    padding-bottom: 30px;
+}
+.main-content .page-sub-content:last-child {
+    padding-bottom: 0;
+}
+.page-sub-content h3 {
+    margin: 0;
+    margin-bottom: 10px;
 }

@@ -1,0 +1,33 @@
+/*
+    CONTENT:
+        - FEATURES
+*/
+
+/* FEATURES
+================================================================================================================== */
+.features {
+    display: flex;
+    width: 100%;
+}
+.features .card {
+    flex-basis: 33.3333333333%;
+    margin: 0 10px;
+}
+.features .card:first-child {
+    margin-left: 0;
+}
+.features .card:last-child {
+    margin-right: 0;
+}
+@media (max-width: 900px) {
+    .features {
+        flex-direction: column;
+    }
+    .features .card {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .features .card:last-child {
+        margin-bottom: 0;
+    }
+}

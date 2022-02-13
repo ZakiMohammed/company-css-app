@@ -1,0 +1,58 @@
+/*
+    CONTENT:
+        - TEAM MEMBERS
+        - CUSTOMER
+*/
+
+/* TEAM MEMBERS
+================================================================================================================== */
+.team-members {
+    display: flex;
+    width: 100%;
+}
+.team-members .card {
+    flex-basis: 25%;
+    margin: 0 10px;
+    text-align: center;
+}
+.team-members .card .card-text {
+    font-size: 14px;
+}
+.team-members .card:first-child {
+    margin-left: 0;
+}
+.team-members .card:last-child {
+    margin-right: 0;
+}
+@media (max-width: 1000px) {
+    .team-members {
+        flex-direction: column;
+    }
+    .team-members .card {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .team-members .card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* CUSTOMER
+================================================================================================================== */
+.customer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.customer a {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+}
+.customer a img {
+    max-width: 150px;
+}
