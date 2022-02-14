@@ -7,6 +7,8 @@
         - BORDER
         - CARD
         - TABLE
+        - FORMS
+        - BUTTONS
 
         - HEADER
         - FOOTER
@@ -27,12 +29,15 @@
     font-family: 'Poppins', sans-serif;
     color: #2d3436;
 }
+
 body {
     margin: 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
     color: #00cec9;
 }
+
 ::selection {
     background-color: #e84393;
     color: #fff;
@@ -50,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 .border-rounded {
     border-radius: 10px;
 }
+
 .border-circle {
     border-radius: 50%;
 }
@@ -62,16 +68,20 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     box-shadow: 2px 2px 5px 0px #dfe6e9;
 }
+
 .card .card-image {
     margin-bottom: 5px;
 }
+
 .card .card-title {
     margin: 0;
 }
+
 .card .card-subtitle {
     margin: 0;
     color: #b2bec3;
 }
+
 .card .card-text {
     margin: 0;
     margin-top: 10px;
@@ -82,75 +92,186 @@ h1, h2, h3, h4, h5, h6 {
 .table-responsive {
     overflow-x: auto;
 }
+
 .table {
     width: 100%;
     border-collapse: collapse;
 }
+
 .table tr th,
 .table tr td {
     border: 1px solid #dfe6e9;
     padding: 5px;
 }
+
 .table tr:nth-child(even) th,
 .table tr:nth-child(even) td {
     background-color: #dfe6e9;
 }
+
 .table tr th {
     color: #e84393;
     border-bottom: 5px solid #dfe6e9;
 }
+
+/* FORMS
+================================================================================================================== */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-label {
+    font-size: 14px;
+    color: #636e72;
+}
+.form-group>.form-label {
+    display: block;
+    margin-bottom: 3px;
+}
+.form-group>.form-control {
+    background-color: #dfe6e9;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.form-group-check-holder {
+    display: flex;
+}
+.form-group-check {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 3px;
+}
+.form-group-check .form-label {
+    display: block;
+    width: 100%;
+}
+.form-group-check .form-control {
+    margin-top: 0;
+    margin-right: 5px;
+}
+@media (max-width: 768px) {
+    .form-group-check-holder {
+        flex-direction: column;
+    }
+    .form-group-check {
+        margin: 0 0 10px;
+    }
+    .form-group-btn {
+        display: flex;
+    }
+    .form-group-btn .btn {
+        flex-grow: 1;
+        margin-right: 5px;
+    }
+    .form-group-btn .btn:last-child {
+        margin-right: 0;
+    }
+}
+
+/* BUTTONS
+================================================================================================================== */
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+.btn i {
+    color: #fff;
+    margin-right: 2px;
+}
+.btn.btn-primary {
+    background-color: #00cec9;
+    color: #fff;
+}
+.btn.btn-primary:hover {
+    background-color: #81ecec;
+}
+.btn.btn-secondary {
+    background-color: #e84393;
+    color: #fff;
+}
+.btn.btn-secondary:hover {
+    background-color: #fd79a8;
+}
+
 
 /* HEADER
 ================================================================================================================== */
 header {
     padding: 20px 20px 30px;
 }
+
 header .logo {
     font-family: 'Bebas Neue', cursive;
     font-size: 36px;
     color: #00cec9;
     margin: 0px;
 }
+
 header .sub-title {
     font-family: 'Cookie', cursive;
     font-size: 24px;
     color: #636e72;
     margin: 0;
 }
+
 header nav {
     display: flex;
     background-color: #dfe6e9;
     margin: 20px 0 0;
     border-radius: 10px;
 }
+
 header nav a {
     display: inline-block;
     padding: 20px 25px;
     text-decoration: none;
     border-radius: 10px;
 }
-header nav a:hover {
-    background-color: #00cec9;
+
+header nav a i {
+    margin-right: 8px;
+    color: #00cec9;
 }
+
+header nav a:hover,
 header nav a.active {
     background-color: #00cec9;
 }
+
+header nav a:hover i,
+header nav a.active i {
+    color: #2d3436;
+}
+
 @media (max-width: 500px) {
     header {
         padding-left: 10px;
         padding-right: 10px;
     }
+
     header .logo,
     header .sub-title,
     header nav {
         text-align: center;
     }
+
     header nav a {
         flex-grow: 1;
         text-align: center;
         padding-left: 10px;
         padding-right: 10px;
         font-size: 14px;
+        text-align: center;
+    }
+    header nav a i {
+        margin: 0px 5px 5px;
+        font-size: 18px;
     }
 }
 
@@ -170,16 +291,19 @@ main {
     flex-direction: row;
     padding: 0 20px;
 }
+
 @media (max-width: 500px) {
     main {
         padding-left: 10px;
         padding-right: 10px;
     }
 }
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
     }
+
     main .main-content {
         padding-right: 0;
     }
@@ -191,6 +315,7 @@ main {
     flex-basis: 75%;
     padding-right: 20px;
 }
+
 @media (max-width: 768px) {
     .main-content {
         padding-right: 0;
@@ -202,25 +327,31 @@ main {
 .sidebar {
     flex-basis: 25%;
 }
+
 .sidebar section {
     margin-bottom: 25px;
 }
+
 .sidebar section:last-child {
     margin-bottom: 0;
 }
+
 .sidebar section h4,
 .sidebar section p {
     margin: 0;
 }
+
 .sidebar section h4 {
     font-size: 18px;
     margin-bottom: 5px;
 }
+
 .sidebar section form {
     display: flex;
     width: 100%;
     margin-top: 10px;
 }
+
 .sidebar section form input {
     flex-grow: 3;
     background-color: #dfe6e9;
@@ -229,6 +360,7 @@ main {
     border-bottom-left-radius: 10px;
     padding: 15px;
 }
+
 .sidebar section form button {
     flex-grow: 1;
     max-width: 100px;
@@ -238,13 +370,19 @@ main {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.sidebar section form button i {
+    color: #fff;
+}
+
 .sidebar section form button:hover {
     background-color: #fd79a8;
 }
+
 .sidebar section .social-links {
     display: flex;
     width: 100%;
 }
+
 .sidebar section .social-links a {
     text-decoration: none;
     flex-grow: 1;
@@ -255,45 +393,57 @@ main {
     padding: 10px;
     background-color: #dfe6e9;
 }
+
 .sidebar section .social-links a:last-child {
     margin-right: 0;
 }
+
 .sidebar section .social-links a i {
     padding-right: 5px;
 }
+
 .sidebar section .social-links .facebook i,
 .sidebar section .social-links .facebook span {
     color: #1877f2;
 }
+
 .sidebar section .social-links .instagram i,
 .sidebar section .social-links .instagram span {
     color: #e1306c;
 }
+
 .sidebar section .social-links .twitter i,
 .sidebar section .social-links .twitter span {
     color: #1da1f2;
 }
+
 .sidebar section .social-links .facebook:hover {
     background-color: #1877f2;
 }
+
 .sidebar section .social-links .facebook:hover i,
 .sidebar section .social-links .facebook:hover span {
     color: #fff;
 }
+
 .sidebar section .social-links .instagram:hover {
     background-color: #e1306c;
 }
+
 .sidebar section .social-links .instagram:hover i,
 .sidebar section .social-links .instagram:hover span {
     color: #fff;
 }
+
 .sidebar section .social-links .twitter:hover {
     background-color: #1da1f2;
 }
+
 .sidebar section .social-links .twitter:hover i,
 .sidebar section .social-links .twitter:hover span {
     color: #fff;
 }
+
 .sidebar section .social-links a i,
 .sidebar section .social-links a span {
     color: #fff;
@@ -314,13 +464,16 @@ main {
 .page-content {
     padding-bottom: 30px;
 }
+
 .page-content img {
     margin-bottom: 10px;
 }
+
 .page-content h2 {
     margin: 0;
     margin-bottom: 10px;
 }
+
 .page-content p {
     margin: 0;
 }
@@ -330,9 +483,11 @@ main {
 .page-sub-content {
     padding-bottom: 30px;
 }
+
 .main-content .page-sub-content:last-child {
     padding-bottom: 0;
 }
+
 .page-sub-content h3 {
     margin: 0;
     margin-bottom: 10px;

@@ -15,7 +15,6 @@
     <!-- css -->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
@@ -25,10 +24,10 @@
         <p class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, mollitia.</p>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="about.html" class="active"><i class="fa-solid fa-circle-info"></i>About</a>
+            <a href="services.html"><i class="fa-solid fa-rocket"></i>Services</a>
+            <a href="contact.html"><i class="fa-solid fa-address-book"></i>Contact</a>
         </nav>
     </header>
 
@@ -48,10 +47,87 @@
             </section>
 
             <section class="page-sub-content">
-                <iframe
-                    class="border-rounded"
+                <iframe class="border-rounded"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15092.541721208994!2d72.819308!3d18.9696254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9879ebcd3ef31652!2sMumbai%20Central!5e0!3m2!1sen!2sin!4v1642502337160!5m2!1sen!2sin"
                     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+
+            <section class="page-sub-content">
+                <h3>Feedback Form</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Enter name">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone</label>
+                        <input class="form-control" type="number" name="phone" id="phone" placeholder="Enter phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Gender</label>
+
+                        <div class="form-group-check-holder">
+                            <div class="form-group-check">
+                                <input class="form-control" type="radio" name="gender" id="male" value="male">
+                                <label class="form-label" for="male">Male</label>
+                            </div>
+                            <div class="form-group-check">
+                                <input class="form-control" type="radio" name="gender" id="female" value="female">
+                                <label class="form-label" for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="designation">Designation</label>
+                        <select class="form-control" name="designation" id="designation">
+                            <option>Employee</option>
+                            <option>Doctor</option>
+                            <option>Teacher</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Likes</label>
+
+                        <div class="form-group-check-holder">
+                            <div class="form-group-check">
+                                <input class="form-control" type="checkbox" name="gender" id="football" value="Football">
+                                <label class="form-label" for="football">Football</label>
+                            </div>
+                            <div class="form-group-check">
+                                <input class="form-control" type="checkbox" name="cricket" id="cricket" value="Cricket">
+                                <label class="form-label" for="cricket">Cricket</label>
+                            </div>
+                            <div class="form-group-check">
+                                <input class="form-control" type="checkbox" name="swimming" id="swimming" value="Swimming">
+                                <label class="form-label" for="swimming">Swimming</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" name="message" id="message" cols="50" rows="5" placeholder="Enter Message"></textarea>
+                    </div>
+
+                    <div class="form-group form-group-btn">
+                        <button class="btn btn-primary">
+                            <i class="fa-regular fa-paper-plane"></i> Send
+                        </button>
+                        <button class="btn btn-secondary" type="reset">
+                            <i class="fas fa-rotate"></i> Reset
+                        </button>
+                    </div>
+
+                </form>
             </section>
         </div>
         <div class="sidebar">
@@ -60,8 +136,9 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, magni?</p>
 
                 <form>
-                    <input type="text" name="search" id="search" placeholder="Search through the website">
-                    <button type="button">Search</button>
+                    <input type="text" name="search" id="search"
+                        placeholder="Search through the website">
+                    <button type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
                 </form>
             </section>
 

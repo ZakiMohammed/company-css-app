@@ -9,6 +9,16 @@ Pages:
 3. Services
 4. Contact
 
+Concepts:
+
+1. Git
+2. Netlify
+3. Google Font
+4. FontAwesome
+5. Flex
+6. Responsive Design (media query)
+7. Forms
+
 ## Base Setup
 
 ### Fonts 
@@ -43,8 +53,23 @@ Background Dark Color: #dfe6e9
 border-radius: 10px;
 ```
 
-## Responsive Design (Media Query) 
+### Responsive Design (Media Query) 
 ```
 Mobile: 500px
 Tab: 768px
+```
+
+### Form Concept
+```
+form-group
+    form-label
+    form-control
+
+form-group-check
+    form-label
+    form-control
+
+btn
+    btn-primary
+    btn-secondary
 ```
